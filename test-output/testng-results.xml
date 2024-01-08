@@ -2,36 +2,36 @@
 <testng-results total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-08T20:31:41Z" name="Suite" finished-at="2024-01-08T20:32:12Z" duration-ms="31072">
+  <suite started-at="2024-01-08T20:52:19Z" name="Suite" finished-at="2024-01-08T20:52:50Z" duration-ms="30443">
     <groups>
     </groups>
-    <test started-at="2024-01-08T20:31:41Z" name="contactTest" finished-at="2024-01-08T20:31:53Z" duration-ms="12521">
+    <test started-at="2024-01-08T20:52:19Z" name="contactTest" finished-at="2024-01-08T20:52:32Z" duration-ms="12452">
       <class name="tests.contactTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.contactTest@346d61be]" started-at="2024-01-08T15:31:41Z" name="setUp" finished-at="2024-01-08T15:31:49Z" duration-ms="8314" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.contactTest@346d61be]" started-at="2024-01-08T15:52:19Z" name="setUp" finished-at="2024-01-08T15:52:29Z" duration-ms="9256" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="contactTest()[pri:0, instance:tests.contactTest@346d61be]" started-at="2024-01-08T15:31:49Z" name="contactTest" finished-at="2024-01-08T15:31:53Z" duration-ms="4118" status="PASS">
+        <test-method signature="contactTest()[pri:0, instance:tests.contactTest@346d61be]" started-at="2024-01-08T15:52:29Z" name="contactTest" finished-at="2024-01-08T15:52:32Z" duration-ms="3155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contactTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.contactTest@346d61be]" started-at="2024-01-08T15:31:53Z" name="tearDown" finished-at="2024-01-08T15:31:53Z" duration-ms="81" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.contactTest@346d61be]" started-at="2024-01-08T15:52:32Z" name="tearDown" finished-at="2024-01-08T15:52:32Z" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.contactTest -->
     </test> <!-- contactTest -->
-    <test started-at="2024-01-08T20:31:53Z" name="registerTest" finished-at="2024-01-08T20:32:12Z" duration-ms="18521">
+    <test started-at="2024-01-08T20:52:32Z" name="registerTest" finished-at="2024-01-08T20:52:50Z" duration-ms="17953">
       <class name="tests.registerTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.registerTest@6631f5ca]" started-at="2024-01-08T15:31:53Z" name="setUp" finished-at="2024-01-08T15:32:01Z" duration-ms="7379" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.registerTest@6631f5ca]" started-at="2024-01-08T15:52:32Z" name="setUp" finished-at="2024-01-08T15:52:38Z" duration-ms="6648" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="registerTest()[pri:0, instance:tests.registerTest@6631f5ca]" started-at="2024-01-08T15:32:01Z" name="registerTest" finished-at="2024-01-08T15:32:12Z" duration-ms="11055" status="PASS">
+        <test-method signature="registerTest()[pri:0, instance:tests.registerTest@6631f5ca]" started-at="2024-01-08T15:52:38Z" name="registerTest" finished-at="2024-01-08T15:52:50Z" duration-ms="11283" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.registerTest@6631f5ca]" started-at="2024-01-08T15:32:12Z" name="tearDown" finished-at="2024-01-08T15:32:12Z" duration-ms="86" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.registerTest@6631f5ca]" started-at="2024-01-08T15:52:50Z" name="tearDown" finished-at="2024-01-08T15:52:50Z" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

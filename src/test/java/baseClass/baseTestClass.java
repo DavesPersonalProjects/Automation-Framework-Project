@@ -24,6 +24,7 @@ public abstract class baseTestClass {
 		configProperties.initializePropertyFile();
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
+		options.setHeadless(true);
 		options.addExtensions(new java.io.File("adblock.crx"));
 		options.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(options);
