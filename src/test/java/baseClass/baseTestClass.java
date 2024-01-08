@@ -1,6 +1,8 @@
 package baseClass;
 
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,6 +27,7 @@ public abstract class baseTestClass {
 		options.addExtensions(new java.io.File("adblock.crx"));
 		options.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(options);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.get(configProperties.property.getProperty("weburl"));
 		}
 		catch (Exception e) {

@@ -1,5 +1,7 @@
 package tests;
 
+import java.util.concurrent.TimeUnit;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,8 +13,8 @@ import loadConfig.configProperties;
 import baseClass.baseTestClass;
 
 public class registerTest extends baseTestClass {
-	@FindBy(id = "slider")
-	WebElement slider;
+	@FindBy(linkText = "Home")
+	WebElement home_button;
 	@FindBy(linkText = "Signup / Login")
 	WebElement signuplogin;
 	@FindBy(xpath="//input[@data-qa='signup-email']") 
@@ -90,7 +92,7 @@ public class registerTest extends baseTestClass {
 		try {
 		System.out.println("Running test two");
 		PageFactory.initElements(driver, this);
-		if (!slider.isDisplayed()) {
+		if (!home_button.isDisplayed()) {
 			throw new Exception("Home Page validation failed");
 		}
 		signuplogin.click();

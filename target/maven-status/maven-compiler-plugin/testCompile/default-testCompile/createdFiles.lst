@@ -1,0 +1,4 @@
+loadConfig\configProperties.class
+tests\registerTest.class
+baseClass\baseTestClass.class
+tests\contactTest.class
