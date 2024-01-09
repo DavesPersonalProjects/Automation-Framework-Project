@@ -1,4 +1,7 @@
 C:\Users\David\eclipse-workspace\AutomationProject\src\test\java\baseClass\baseTestClass.java
 C:\Users\David\eclipse-workspace\AutomationProject\src\test\java\loadConfig\configProperties.java
-C:\Users\David\eclipse-workspace\AutomationProject\src\test\java\tests\contactTest.java
-C:\Users\David\eclipse-workspace\AutomationProject\src\test\java\tests\registerTest.java
+C:\Users\David\eclipse-workspace\AutomationProject\src\test\java\pages\contactsPageTest.java
+C:\Users\David\eclipse-workspace\AutomationProject\src\test\java\pages\registerPageTest.java
+C:\Users\David\eclipse-workspace\AutomationProject\src\test\java\pages\productsPageTest.java
+C:\Users\David\eclipse-workspace\AutomationProject\src\test\java\pages\homePageTest.java
+C:\Users\David\eclipse-workspace\AutomationProject\src\test\java\baseClass\extentReport.java

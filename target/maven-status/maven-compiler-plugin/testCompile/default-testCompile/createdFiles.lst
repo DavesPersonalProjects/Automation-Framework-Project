@@ -1,4 +1,7 @@
-loadConfig\configProperties.class
-tests\registerTest.class
+pages\homePageTest.class
 baseClass\baseTestClass.class
-tests\contactTest.class
+loadConfig\configProperties.class
+pages\productsPageTest.class
+baseClass\extentReport.class
+pages\contactsPageTest.class
+pages\registerPageTest.class

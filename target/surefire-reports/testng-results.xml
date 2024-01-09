@@ -1,31 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="2" passed="2" failed="0" skipped="0">
+<testng-results total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-08T20:49:11Z" name="Surefire suite" finished-at="2024-01-08T20:49:35Z" duration-ms="23682">
+  <suite started-at="2024-01-09T20:52:53Z" name="Surefire suite" finished-at="2024-01-09T20:53:54Z" duration-ms="60777">
     <groups>
     </groups>
-    <test started-at="2024-01-08T20:49:11Z" name="Surefire test" finished-at="2024-01-08T20:49:35Z" duration-ms="23682">
-      <class name="tests.registerTest">
-        <test-method signature="registerTest()[pri:0, instance:tests.registerTest@5b12b668]" started-at="2024-01-08T15:49:24Z" name="registerTest" finished-at="2024-01-08T15:49:34Z" duration-ms="10766" status="PASS">
+    <test started-at="2024-01-09T20:52:53Z" name="Surefire test" finished-at="2024-01-09T20:53:54Z" duration-ms="60777">
+      <class name="pages.contactsPageTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:pages.contactsPageTest@3eb738bb]" started-at="2024-01-09T15:52:53Z" name="beforeSuite" finished-at="2024-01-09T15:52:53Z" duration-ms="146" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registerTest -->
-      </class> <!-- tests.registerTest -->
-      <class name="tests.contactTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.contactTest@327514f]" started-at="2024-01-08T15:49:11Z" name="setUp" finished-at="2024-01-08T15:49:21Z" duration-ms="9891" status="PASS">
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:pages.contactsPageTest@3eb738bb]" started-at="2024-01-09T15:52:53Z" name="setUp" finished-at="2024-01-09T15:53:02Z" duration-ms="8512" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="contactTest()[pri:0, instance:tests.contactTest@327514f]" started-at="2024-01-08T15:49:21Z" name="contactTest" finished-at="2024-01-08T15:49:24Z" duration-ms="2999" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:pages.contactsPageTest@3eb738bb]" started-at="2024-01-09T15:53:02Z" name="beforeMethod" finished-at="2024-01-09T15:53:02Z" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pages.contactsPageTest.verify_contact_page() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- contactTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.contactTest@327514f]" started-at="2024-01-08T15:49:34Z" name="tearDown" finished-at="2024-01-08T15:49:35Z" duration-ms="19" status="PASS">
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verify_contact_page()[pri:0, instance:pages.contactsPageTest@3eb738bb]" started-at="2024-01-09T15:53:02Z" name="verify_contact_page" finished-at="2024-01-09T15:53:06Z" duration-ms="4052" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_contact_page -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:pages.contactsPageTest@3eb738bb]" started-at="2024-01-09T15:53:06Z" name="getResult" finished-at="2024-01-09T15:53:06Z" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_contact_page status=SUCCESS method=contactsPageTest.verify_contact_page()[pri:0, instance:pages.contactsPageTest@3eb738bb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:pages.contactsPageTest@3eb738bb]" started-at="2024-01-09T15:53:06Z" name="tearDown" finished-at="2024-01-09T15:53:07Z" duration-ms="813" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.contactTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:pages.contactsPageTest@3eb738bb]" started-at="2024-01-09T15:53:54Z" name="afterSuite" finished-at="2024-01-09T15:53:55Z" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- pages.contactsPageTest -->
+      <class name="pages.homePageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:pages.homePageTest@5bda8e08]" started-at="2024-01-09T15:53:07Z" name="setUp" finished-at="2024-01-09T15:53:15Z" duration-ms="7726" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:pages.homePageTest@5bda8e08]" started-at="2024-01-09T15:53:15Z" name="beforeMethod" finished-at="2024-01-09T15:53:15Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pages.homePageTest.verify_subscription_in_home_page() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verify_subscription_in_home_page()[pri:0, instance:pages.homePageTest@5bda8e08]" started-at="2024-01-09T15:53:15Z" name="verify_subscription_in_home_page" finished-at="2024-01-09T15:53:18Z" duration-ms="3160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_subscription_in_home_page -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:pages.homePageTest@5bda8e08]" started-at="2024-01-09T15:53:18Z" name="getResult" finished-at="2024-01-09T15:53:18Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_subscription_in_home_page status=SUCCESS method=homePageTest.verify_subscription_in_home_page()[pri:0, instance:pages.homePageTest@5bda8e08] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:pages.homePageTest@5bda8e08]" started-at="2024-01-09T15:53:18Z" name="tearDown" finished-at="2024-01-09T15:53:19Z" duration-ms="799" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- pages.homePageTest -->
+      <class name="pages.productsPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:pages.productsPageTest@1e800aaa]" started-at="2024-01-09T15:53:19Z" name="setUp" finished-at="2024-01-09T15:53:27Z" duration-ms="8133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verify_functionality_of_cart()[pri:0, instance:pages.productsPageTest@1e800aaa]" started-at="2024-01-09T15:53:27Z" name="verify_functionality_of_cart" finished-at="2024-01-09T15:53:29Z" duration-ms="2175" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_functionality_of_cart -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:pages.productsPageTest@1e800aaa]" started-at="2024-01-09T15:53:27Z" name="beforeMethod" finished-at="2024-01-09T15:53:27Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pages.productsPageTest.verify_functionality_of_cart() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:pages.productsPageTest@1e800aaa]" started-at="2024-01-09T15:53:29Z" name="getResult" finished-at="2024-01-09T15:53:29Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_functionality_of_cart status=SUCCESS method=productsPageTest.verify_functionality_of_cart()[pri:0, instance:pages.productsPageTest@1e800aaa] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:pages.productsPageTest@1e800aaa]" started-at="2024-01-09T15:53:29Z" name="tearDown" finished-at="2024-01-09T15:53:30Z" duration-ms="758" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- pages.productsPageTest -->
+      <class name="pages.registerPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:pages.registerPageTest@185a6e9]" started-at="2024-01-09T15:53:30Z" name="setUp" finished-at="2024-01-09T15:53:37Z" duration-ms="7599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:pages.registerPageTest@185a6e9]" started-at="2024-01-09T15:53:37Z" name="beforeMethod" finished-at="2024-01-09T15:53:37Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void pages.registerPageTest.verify_create_account() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verify_create_account()[pri:0, instance:pages.registerPageTest@185a6e9]" started-at="2024-01-09T15:53:37Z" name="verify_create_account" finished-at="2024-01-09T15:53:54Z" duration-ms="16264" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_create_account -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:pages.registerPageTest@185a6e9]" started-at="2024-01-09T15:53:54Z" name="tearDown" finished-at="2024-01-09T15:53:54Z" duration-ms="774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:pages.registerPageTest@185a6e9]" started-at="2024-01-09T15:53:54Z" name="getResult" finished-at="2024-01-09T15:53:54Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_create_account status=SUCCESS method=registerPageTest.verify_create_account()[pri:0, instance:pages.registerPageTest@185a6e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- pages.registerPageTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

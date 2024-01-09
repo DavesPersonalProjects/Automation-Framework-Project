@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import baseClass.baseTestClass;
 
-public class productsPage extends baseTestClass {
+public class productsPageTest extends baseTestClass {
 	@FindBy(id = "slider")
 	WebElement slider;
 	@FindBy(xpath="//a[@data-product-id='1']") 

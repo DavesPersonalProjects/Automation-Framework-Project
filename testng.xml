@@ -1,23 +1,35 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test name="cartTest">
-    <classes>
-      <class name="pages.productsPage"/>
-    </classes>
-  </test>
-  <test name="contactTest">
-    <classes>
-      <class name="pages.contactsPage"/>
-    </classes>
-  </test> <!-- Test -->
-  <test name="registerTest">
-    <classes>
-      <class name="pages.registerPage"/>
-    </classes>
-  </test> <!-- Test -->
-    <test name="subscriptionTest">
-    <classes>
-      <class name="pages.homePage"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+	<test thread-count="5" name="contactTest">
+		<classes>
+			<class name="pages.contactsPageTest" />
+		</classes>
+	</test>
+	<!--
+	Test -->
+	<test thread-count="5" name="registerTest">
+		<classes>
+			<class name="pages.registerPageTest" />
+		</classes>
+	</test> <!--
+	Test -->
+	<test thread-count="5" name="subscriptionTest">
+		<classes>
+			<class name="pages.homePageTest" />
+		</classes>
+	</test>
+	<test thread-count="5" name="cartTest">
+		<classes>
+			<class name="pages.productsPageTest" />
+		</classes>
+	</test> <!--
+	Test -->
+
+</suite> <!--
+Suite -->
+
+  
+     
+ 
+ 

@@ -3,8 +3,10 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test name="Surefire test">
     <classes>
-      <class name="tests.contactTest"/>
-      <class name="tests.registerTest"/>
+      <class name="pages.contactsPageTest"/>
+      <class name="pages.homePageTest"/>
+      <class name="pages.productsPageTest"/>
+      <class name="pages.registerPageTest"/>
     </classes>
   </test> <!-- Surefire test -->
 </suite> <!-- Failed suite [Surefire suite] -->

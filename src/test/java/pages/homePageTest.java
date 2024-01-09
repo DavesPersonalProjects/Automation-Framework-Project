@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import loadConfig.configProperties;
 import baseClass.baseTestClass;
 
-public class homePage extends baseTestClass {
+public class homePageTest extends baseTestClass {
 	@FindBy(xpath = "//*[contains(text(), 'Subscription')]")
 	WebElement subscription_text;
 	@FindBy(id = "slider")
@@ -31,6 +31,7 @@ public class homePage extends baseTestClass {
 		try {
 		System.out.println("Running subscription test");
 		PageFactory.initElements(driver, this);
+		Thread.sleep(3000);
 		if (!slider.isDisplayed()) {
 			throw new Exception("Home Page validation failed");
 		}

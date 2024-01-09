@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +102,22 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.contactTest" class="method navigator-link" hash-for-method="contactTest">contactTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="pages.contactsPageTest" class="method navigator-link" hash-for-method="verify_contact_page">verify_contact_page</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.registerTest" class="method navigator-link" hash-for-method="registerTest">registerTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="pages.registerPageTest" class="method navigator-link" hash-for-method="verify_create_account">verify_create_account</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="pages.productsPageTest" class="method navigator-link" hash-for-method="verify_functionality_of_cart">verify_functionality_of_cart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="pages.homePageTest" class="method navigator-link" hash-for-method="verify_subscription_in_home_page">verify_subscription_in_home_page</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -125,14 +135,14 @@
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.registerTest</span>
+              <span class="class-name">pages.contactsPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="registerTest">
-                  </a> <!-- registerTest -->
-                  <span class="method-name">registerTest</span>
+                  <a name="verify_contact_page">
+                  </a> <!-- verify_contact_page -->
+                  <span class="method-name">verify_contact_page</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -140,14 +150,44 @@
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.contactTest</span>
+              <span class="class-name">pages.productsPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="contactTest">
-                  </a> <!-- contactTest -->
-                  <span class="method-name">contactTest</span>
+                  <a name="verify_functionality_of_cart">
+                  </a> <!-- verify_functionality_of_cart -->
+                  <span class="method-name">verify_functionality_of_cart</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">pages.homePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_subscription_in_home_page">
+                  </a> <!-- verify_subscription_in_home_page -->
+                  <span class="method-name">verify_subscription_in_home_page</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">pages.registerPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_create_account">
+                  </a> <!-- verify_create_account -->
+                  <span class="method-name">verify_create_account</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -163,8 +203,10 @@
 &lt;suite name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
   &lt;test name=&quot;Surefire test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.contactTest&quot;/&gt;
-      &lt;class name=&quot;tests.registerTest&quot;/&gt;
+      &lt;class name=&quot;pages.contactsPageTest&quot;/&gt;
+      &lt;class name=&quot;pages.homePageTest&quot;/&gt;
+      &lt;class name=&quot;pages.productsPageTest&quot;/&gt;
+      &lt;class name=&quot;pages.registerPageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
 &lt;/suite&gt; &lt;!-- Surefire suite --&gt;
@@ -178,7 +220,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (2 classes)</span>
+                <span class="test-name">Surefire test (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -204,20 +246,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'registerTest')
-data.setCell(0, 2, 'tests.registerTest')
-data.setCell(0, 3, 10766);
+data.setCell(0, 1, 'verify_create_account')
+data.setCell(0, 2, 'pages.registerPageTest')
+data.setCell(0, 3, 16264);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'contactTest')
-data.setCell(1, 2, 'tests.contactTest')
-data.setCell(1, 3, 2999);
+data.setCell(1, 1, 'verify_contact_page')
+data.setCell(1, 2, 'pages.contactsPageTest')
+data.setCell(1, 3, 4052);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verify_subscription_in_home_page')
+data.setCell(2, 2, 'pages.homePageTest')
+data.setCell(2, 3, 3160);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verify_functionality_of_cart')
+data.setCell(3, 2, 'pages.productsPageTest')
+data.setCell(3, 3, 2175);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 25 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -232,15 +282,33 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">tests.registerTest</span>
+              <span class="ignored-class-name">pages.productsPageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUp</span>
+                <span class="ignored-method-name">beforeSuite</span>
                 <br/>
-                <span class="ignored-method-name">tearDown</span>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">pages.homePageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">pages.registerPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -252,29 +320,107 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.contactTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setUp</span>
+              <div class="chronological-class-name">pages.contactsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">148 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void pages.contactsPageTest.verify_contact_page() throws java.lang.Exception)</span>
+                <span class="method-start">8662 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">contactTest</span>
-                <span class="method-start">9896 ms</span>
+                <span class="method-name">verify_contact_page</span>
+                <span class="method-start">8664 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.registerTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">registerTest</span>
-                <span class="method-start">12896 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.contactTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=verify_contact_page status=SUCCESS method=contactsPageTest.verify_contact_page()[pr...)</span>
+                <span class="method-start">12716 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">23662 ms</span>
-              </div> <!-- configuration-test after -->
+                <span class="method-start">12719 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">pages.homePageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">13533 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void pages.homePageTest.verify_subscription_in_home_page() throws java.lang.Exception)</span>
+                <span class="method-start">21259 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_subscription_in_home_page</span>
+                <span class="method-start">21260 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=verify_subscription_in_home_page status=SUCCESS method=homePageTest.verify_subscrip...)</span>
+                <span class="method-start">24420 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">24421 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">pages.productsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">25220 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void pages.productsPageTest.verify_functionality_of_cart() throws java.lang.Exception)</span>
+                <span class="method-start">33353 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_functionality_of_cart</span>
+                <span class="method-start">33353 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=verify_functionality_of_cart status=SUCCESS method=productsPageTest.verify_function...)</span>
+                <span class="method-start">35528 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">35528 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">pages.registerPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">36286 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void pages.registerPageTest.verify_create_account() throws java.lang.Exception)</span>
+                <span class="method-start">43885 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_create_account</span>
+                <span class="method-start">43885 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=verify_create_account status=SUCCESS method=registerPageTest.verify_create_account(...)</span>
+                <span class="method-start">60149 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">60149 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">pages.contactsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">afterSuite</span>
+                <span class="method-start">60937 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import loadConfig.configProperties;
 import baseClass.baseTestClass;
 
-public class contactsPage extends baseTestClass {
+public class contactsPageTest extends baseTestClass {
 	@FindBy(linkText = "Contact us")
 	WebElement contactUs;
 	@FindBy(name = "name")
@@ -42,6 +42,7 @@ public class contactsPage extends baseTestClass {
 		try {
 		System.out.println("Running contacts page test");
 		PageFactory.initElements(driver, this);
+		Thread.sleep(3000);
 		if (!slider.isDisplayed()) {
 			throw new Exception("Home Page validation failed");
 		}
@@ -55,7 +56,6 @@ public class contactsPage extends baseTestClass {
 		if (!successText.isDisplayed()) {
 			throw new Exception("Contact Page validation failed");
 		}
-		Thread.sleep(2000);
 	}catch(Exception e) {
 		e.printStackTrace();
 		Assert.fail();

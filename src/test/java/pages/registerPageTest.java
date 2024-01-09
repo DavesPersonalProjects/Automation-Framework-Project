@@ -11,9 +11,9 @@ import org.testng.annotations.Test;
 import loadConfig.configProperties;
 import baseClass.baseTestClass;
 
-public class registerPage extends baseTestClass {
-	@FindBy(linkText = "Home")
-	WebElement home_button;
+public class registerPageTest extends baseTestClass {
+	@FindBy(id = "slider")
+	WebElement slider;
 	@FindBy(linkText = "Signup / Login")
 	WebElement signup_login;
 	@FindBy(xpath="//input[@data-qa='signup-email']") 
@@ -96,7 +96,7 @@ public class registerPage extends baseTestClass {
 		try {
 		System.out.println("Running register page test");
 		PageFactory.initElements(driver, this);
-		if (!home_button.isDisplayed()) {
+		if (!slider.isDisplayed()) {
 			throw new Exception("Home Page validation failed");
 		}
 		signup_login.click();
