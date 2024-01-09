@@ -1,4 +1,4 @@
-package tests;
+package pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import loadConfig.configProperties;
 import baseClass.baseTestClass;
 
-public class contactTest extends baseTestClass {
+public class contactsPage extends baseTestClass {
 	@FindBy(linkText = "Contact us")
 	WebElement contactUs;
 	@FindBy(name = "name")
@@ -38,15 +38,14 @@ public class contactTest extends baseTestClass {
 	 * 7.Verify success text appears
 	 */
 	@Test
-	public void contactTest() throws Exception {
+	public void verify_contact_page() throws Exception {
 		try {
-		System.out.println("Running test one");
+		System.out.println("Running contacts page test");
 		PageFactory.initElements(driver, this);
 		if (!slider.isDisplayed()) {
 			throw new Exception("Home Page validation failed");
 		}
 		contactUs.click();
-		
 		name.sendKeys(configProperties.property.getProperty("name"));
 		email.sendKeys(configProperties.property.getProperty("email"));
 		subject.sendKeys("test");

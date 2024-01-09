@@ -25,7 +25,16 @@ pipeline {
                 }
             }
         }
-
+	
+	 stage('Storing Reports') {
+            steps {
+                script {
+                 bat 'move newman\\*.html  target'
+                 archiveArtifacts artifacts: "target\\*.html", fingerprint: true
+                 bat 'del target\\*.html'
+                }
+            }
+        }
 
 }
     post {

@@ -1,5 +1,7 @@
 package baseClass;
 
+import java.lang.reflect.Method;
+
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -22,9 +24,9 @@ public class extentReport {
 		extent.attachReporter(htmlReporter);
 	}
 	 @BeforeMethod
-	    public void beforeMethod() {
+	    public void beforeMethod(Method method) {
 	        // Start a new test before each test method
-	        test = extent.createTest(getClass().getSimpleName() + "." + Thread.currentThread().getStackTrace()[2].getMethodName());
+	        test = extent.createTest(method.getName());
 	    }
 	@AfterMethod
 	public void getResult(ITestResult result) {

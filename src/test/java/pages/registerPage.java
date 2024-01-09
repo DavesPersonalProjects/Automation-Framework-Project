@@ -1,6 +1,5 @@
-package tests;
+package pages;
 
-import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -12,11 +11,11 @@ import org.testng.annotations.Test;
 import loadConfig.configProperties;
 import baseClass.baseTestClass;
 
-public class registerTest extends baseTestClass {
+public class registerPage extends baseTestClass {
 	@FindBy(linkText = "Home")
 	WebElement home_button;
 	@FindBy(linkText = "Signup / Login")
-	WebElement signuplogin;
+	WebElement signup_login;
 	@FindBy(xpath="//input[@data-qa='signup-email']") 
 	WebElement signupEmail;
 	@FindBy(xpath="//input[@data-qa='signup-name']") 
@@ -93,14 +92,14 @@ public class registerTest extends baseTestClass {
 	}
 
 	@Test
-	public void registerTest() throws Exception {
+	public void verify_create_account() throws Exception {
 		try {
-		System.out.println("Running test two");
+		System.out.println("Running register page test");
 		PageFactory.initElements(driver, this);
 		if (!home_button.isDisplayed()) {
 			throw new Exception("Home Page validation failed");
 		}
-		signuplogin.click();
+		signup_login.click();
 		signupName.sendKeys(configProperties.property.getProperty("name"));
 		signupEmail.sendKeys(configProperties.property.getProperty("email"));
 		sign_up.click();

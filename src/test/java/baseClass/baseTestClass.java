@@ -23,7 +23,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import org.testng.ITestResult;
 
-public abstract class baseTestClass extends extentReport {
+public class baseTestClass extends extentReport {
 	protected static WebDriver driver;
 	
 	@BeforeTest
