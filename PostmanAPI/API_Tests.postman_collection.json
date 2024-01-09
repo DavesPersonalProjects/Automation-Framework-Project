@@ -1,0 +1,1545 @@
+{
+	"info": {
+		"_postman_id": "bef151a5-0693-4906-a6b7-02933dfc82f2",
+		"name": "API Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32174043"
+	},
+	"item": [
+		{
+			"name": "Create_Delete_Users",
+			"item": [
+				{
+					"name": "Create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate response\", function() {\r",
+									"    pm.expect(responseData.message).to.eql(\"User created!\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"    \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "{{name}}",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "{{title}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "{{birth_date}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_month",
+									"value": "{{birth_month}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_year",
+									"value": "{{birth_year}}",
+									"type": "text"
+								},
+								{
+									"key": "firstname",
+									"value": "{{firstname}}",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "{{lastname}}",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "{{company}}",
+									"type": "text"
+								},
+								{
+									"key": "address1",
+									"value": "{{address1}}",
+									"type": "text"
+								},
+								{
+									"key": "address2",
+									"value": "{{address2}}",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "{{country}}",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "{{zipcode}}",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "{{state}}",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "{{city}}",
+									"type": "text"
+								},
+								{
+									"key": "mobile_number",
+									"value": "{{mobile_number}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/createAccount?name={{name}}",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"createAccount"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{{name}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate response\", function() {\r",
+									"    pm.expect(responseData.message).to.eql(\"Account deleted!\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/deleteAccount",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"deleteAccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Duplicate_User_Lockout",
+			"item": [
+				{
+					"name": "Create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(201);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validate response\", function() {\r",
+									"    pm.expect(responseData.message).to.eql(\"User created!\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"    \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "{{name}}",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "{{title}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "{{birth_date}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_month",
+									"value": "{{birth_month}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_year",
+									"value": "{{birth_year}}",
+									"type": "text"
+								},
+								{
+									"key": "firstname",
+									"value": "{{firstname}}",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "{{lastname}}",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "{{company}}",
+									"type": "text"
+								},
+								{
+									"key": "address1",
+									"value": "{{address1}}",
+									"type": "text"
+								},
+								{
+									"key": "address2",
+									"value": "{{address2}}",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "{{country}}",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "{{zipcode}}",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "{{state}}",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "{{city}}",
+									"type": "text"
+								},
+								{
+									"key": "mobile_number",
+									"value": "{{mobile_number}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/createAccount",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"createAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create duplicate user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(400);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validate response\", function() {\r",
+									"    pm.expect(responseData.message).to.eql(\"Email already exists!\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"    \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "{{name}}",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "{{title}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "{{birth_date}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_month",
+									"value": "{{birth_month}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_year",
+									"value": "{{birth_year}}",
+									"type": "text"
+								},
+								{
+									"key": "firstname",
+									"value": "{{firstname}}",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "{{lastname}}",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "{{company}}",
+									"type": "text"
+								},
+								{
+									"key": "address1",
+									"value": "{{address1}}",
+									"type": "text"
+								},
+								{
+									"key": "address2",
+									"value": "{{address2}}",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "{{country}}",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "{{zipcode}}",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "{{state}}",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "{{city}}",
+									"type": "text"
+								},
+								{
+									"key": "mobile_number",
+									"value": "{{mobile_number}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/createAccount",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"createAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate response\", function() {\r",
+									"    pm.expect(responseData.message).to.eql(\"Account deleted!\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/deleteAccount",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"deleteAccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get_All_Products",
+			"item": [
+				{
+					"name": "Get",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has 'id' property\", function () {\r",
+									"    pm.response.to.have.jsonBody('products');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://automationexercise.com/api/productsList",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"productsList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get_Products_of_a_Created_User",
+			"item": [
+				{
+					"name": "Create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate response\", function() {\r",
+									"    pm.expect(responseData.message).to.eql(\"User created!\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"    \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "{{name}}",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "{{title}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "{{birth_date}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_month",
+									"value": "{{birth_month}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_year",
+									"value": "{{birth_year}}",
+									"type": "text"
+								},
+								{
+									"key": "firstname",
+									"value": "{{firstname}}",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "{{lastname}}",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "{{company}}",
+									"type": "text"
+								},
+								{
+									"key": "address1",
+									"value": "{{address1}}",
+									"type": "text"
+								},
+								{
+									"key": "address2",
+									"value": "{{address2}}",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "{{country}}",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "{{zipcode}}",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "{{state}}",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "{{city}}",
+									"type": "text"
+								},
+								{
+									"key": "mobile_number",
+									"value": "{{mobile_number}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/createAccount",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"createAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get account by email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has 'id' property\", function () {\r",
+									"     pm.expect(responseData.user.id).to.not.be.null;\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "testuser321@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/getUserDetailByEmail?email={{email}}",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"getUserDetailByEmail"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "{{email}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validate response\", function() {\r",
+									"    pm.expect(responseData.message).to.eql(\"Account deleted!\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/deleteAccount",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"deleteAccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invalid_Login",
+			"item": [
+				{
+					"name": "Create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(201);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validate response\", function() {\r",
+									"    pm.expect(responseData.message).to.eql(\"User created!\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"    \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "{{name}}",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "{{title}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "{{birth_date}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_month",
+									"value": "{{birth_month}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_year",
+									"value": "{{birth_year}}",
+									"type": "text"
+								},
+								{
+									"key": "firstname",
+									"value": "{{firstname}}",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "{{lastname}}",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "{{company}}",
+									"type": "text"
+								},
+								{
+									"key": "address1",
+									"value": "{{address1}}",
+									"type": "text"
+								},
+								{
+									"key": "address2",
+									"value": "{{address2}}",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "{{country}}",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "{{zipcode}}",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "{{state}}",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "{{city}}",
+									"type": "text"
+								},
+								{
+									"key": "mobile_number",
+									"value": "{{mobile_number}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/createAccount",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"createAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate response\", function() {\r",
+									"    pm.expect(responseData.message).to.eql(\"User not found!\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"    \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "wrongpassword\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/verifyLogin",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"verifyLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate response\", function() {\r",
+									"    pm.expect(responseData.message).to.eql(\"Account deleted!\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/deleteAccount",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"deleteAccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Update_User",
+			"item": [
+				{
+					"name": "Create User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate response\", function() {\r",
+									"    pm.expect(responseData.message).to.eql(\"User created!\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"    \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "{{name}}",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "{{title}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "{{birth_date}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_month",
+									"value": "{{birth_month}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_year",
+									"value": "{{birth_year}}",
+									"type": "text"
+								},
+								{
+									"key": "firstname",
+									"value": "{{firstname}}",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "{{lastname}}",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "{{company}}",
+									"type": "text"
+								},
+								{
+									"key": "address1",
+									"value": "{{address1}}",
+									"type": "text"
+								},
+								{
+									"key": "address2",
+									"value": "{{address2}}",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "{{country}}",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "{{zipcode}}",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "{{state}}",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "{{city}}",
+									"type": "text"
+								},
+								{
+									"key": "mobile_number",
+									"value": "{{mobile_number}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/createAccount",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"createAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate response\", function() {\r",
+									"    pm.expect(responseData.message).to.eql(\"User updated!\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"    \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "testuserupdated",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "{{title}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "{{birth_date}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_month",
+									"value": "{{birth_month}}",
+									"type": "text"
+								},
+								{
+									"key": "birth_year",
+									"value": "{{birth_year}}",
+									"type": "text"
+								},
+								{
+									"key": "firstname",
+									"value": "{{firstname}}",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "{{lastname}}",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "{{company}}",
+									"type": "text"
+								},
+								{
+									"key": "address1",
+									"value": "{{address1}}",
+									"type": "text"
+								},
+								{
+									"key": "address2",
+									"value": "{{address2}}",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "{{country}}",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "{{zipcode}}",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "{{state}}",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "{{city}}",
+									"type": "text"
+								},
+								{
+									"key": "mobile_number",
+									"value": "{{mobile_number}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/updateAccount",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"updateAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get account by email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check name property\", function() {\r",
+									"    pm.expect(responseData.user.name.trim()).to.eql(\"testuserupdated\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/getUserDetailByEmail?email={{email}}",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"getUserDetailByEmail"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "{{email}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"let responseData = pm.response.json();\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(responseData.responseCode).to.eql(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate response\", function() {\r",
+									"    pm.expect(responseData.message).to.eql(\"Account deleted!\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://automationexercise.com/api/deleteAccount",
+							"protocol": "https",
+							"host": [
+								"automationexercise",
+								"com"
+							],
+							"path": [
+								"api",
+								"deleteAccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

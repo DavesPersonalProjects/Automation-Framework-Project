@@ -87,6 +87,11 @@ public class registerTest extends baseTestClass {
 	17. Click 'Delete Account' button
 	18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
 	 */
+	public void objSelect(WebElement element,String text) {
+		Select select = new Select(element);
+		select.selectByVisibleText(text);
+	}
+
 	@Test
 	public void registerTest() throws Exception {
 		try {

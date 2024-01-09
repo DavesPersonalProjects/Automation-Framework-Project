@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/DavesPersonalProjects/Automation-Framework-Project']]])
+                }
+            }
+        }
+        
+             stage('Front end Tests') {
+            steps {
+                script {
+                 bat 'mvn clean test -DsuiteXmlFile=testng.xml'
+                }
+            }
+        }
+        
+           stage('API Tests') {
+            steps {
+                script {
+                 bat 'newman run PostmanAPI/API_Tests.postman_collection.json -r htmlextra'
+                }
+            }
+        }
+
+
+}
+    post {
+        success {
+            echo 'Finished: SUCCESS'
+        }
+    }
+}

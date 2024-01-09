@@ -8,13 +8,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import loadConfig.configProperties;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
+import org.testng.ITestResult;
 
-public abstract class baseTestClass {
+public abstract class baseTestClass extends extentReport {
 	protected static WebDriver driver;
 	
 	@BeforeTest
@@ -38,14 +47,10 @@ public abstract class baseTestClass {
 	}
 
 
+
 @AfterTest
 public void tearDown() {
 	driver.close();
-}
-
-public void objSelect(WebElement element,String text) {
-	Select select = new Select(element);
-	select.selectByVisibleText(text);
 }
 
 
