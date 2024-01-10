@@ -1,13 +1,13 @@
-This project was made to demonstrate my knowledge of automation after my 16 months at Johnson Controls. 
-Website being tested was a mock store website found here https://www.automationexercise.com/
+This project demonstrated my knowledge of automation after my 16 months at Johnson Controls. 
+The website being tested was a mock store website found here https://www.automationexercise.com/
 
-Stack Used
-Java used in Eclipse IDE
-Selenium to automate front end testing
-Postman to automate API testing
-TestNG to generate test cases
-Maven to compile the Java code
-ExtentReport to get html reports
+Stack Used:
+Java in Eclipse IDE,
+Selenium to automate front-end testing,
+Postman to automate API testing,
+TestNG to generate test cases,
+Maven to compile the Java code,
+ExtentReport to get html reports,
 Jenkins for continuous integration
 
 Pics of Jenkins being used
